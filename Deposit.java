@@ -2,6 +2,8 @@ package atm;
 // Deposit.java
 // Represents a deposit ATM transaction
 
+import atm.db.BankDatabase;
+
 public class Deposit extends Transaction
 {
    private double amount; // amount to deposit
@@ -10,9 +12,9 @@ public class Deposit extends Transaction
    private final static int CANCELED = 0; // constant for cancel option
 
    // Deposit constructor
-   public Deposit(int userAccountNumber, Screen atmScreen, 
-      BankDatabase atmBankDatabase, Keypad atmKeypad, 
-      DepositSlot atmDepositSlot)
+   public Deposit(int userAccountNumber, Screen atmScreen,
+                  BankDatabase atmBankDatabase, Keypad atmKeypad,
+                  DepositSlot atmDepositSlot)
    {
       // initialize rclass variables
       super(userAccountNumber, atmScreen, atmBankDatabase);

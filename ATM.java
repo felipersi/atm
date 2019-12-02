@@ -2,7 +2,9 @@ package atm;
 // ATM.java
 // Represents an automated teller machine
 
-public class ATM 
+import atm.db.BankDatabase;
+
+public class ATM
 {
    private boolean userAuthenticated; // whether user is authenticated
    private int currentAccountNumber; // current user's account number

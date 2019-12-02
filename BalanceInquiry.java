@@ -2,6 +2,8 @@ package atm;
 // BalanceInquiry.java
 // Represents a balance inquiry ATM transaction
 
+import atm.db.BankDatabase;
+
 public class BalanceInquiry extends Transaction
 {
    // BalanceInquiry constructor

@@ -2,6 +2,8 @@ package atm;
 // Withdrawal.java
 // Represents a withdrawal ATM transaction
 
+import atm.db.BankDatabase;
+
 public class Withdrawal extends Transaction
 {
    private int amount; // amount to withdraw
@@ -12,9 +14,9 @@ public class Withdrawal extends Transaction
    private final static int CANCELED = 6;
 
    // Withdrawal constructor
-   public Withdrawal(int userAccountNumber, Screen atmScreen, 
-      BankDatabase atmBankDatabase, Keypad atmKeypad, 
-      CashDispenser atmCashDispenser)
+   public Withdrawal(int userAccountNumber, Screen atmScreen,
+                     BankDatabase atmBankDatabase, Keypad atmKeypad,
+                     CashDispenser atmCashDispenser)
    {
       // initialize superclass variables
       super(userAccountNumber, atmScreen, atmBankDatabase);

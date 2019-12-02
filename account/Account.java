@@ -1,59 +1,27 @@
 package atm.account;
 
-public class Account 
-{
-   private int accountNumber;
-   private int pin;
-   private double availableBalance;
-   private double totalBalance;
+public class Account {
+   private float balance = 0.0f;
+   private String accountId;
 
-
-   public Account(int theAccountNumber, int thePIN, 
-      double theAvailableBalance, double theTotalBalance)
-   {
-      accountNumber = theAccountNumber;
-      pin = thePIN;
-      availableBalance = theAvailableBalance;
-      totalBalance = theTotalBalance;
+   public void deposit(float amount) {
+      balance += amount;
    }
 
-
-   public boolean validatePIN(int userPIN)
-   {
-      if (userPIN == pin)
-         return true;
-      else
-         return false;
+   public void withdraw(float amount) {
+      balance -= amount;
    }
 
-   public double getAvailableBalance()
-   {
-
-      return availableBalance;
+   public float getBalance() {
+      return balance;
    }
 
-
-   public double getTotalBalance()
-   {
-
-      return totalBalance;
+   public String getAccountId() {
+      return accountId;
    }
 
-
-   public void credit(double amount)
-   {
-
-      totalBalance += amount;
-   }
-
-   public void debit(double amount)
-   {
-      availableBalance -= amount;
-      totalBalance -= amount;
-   }
-   public int getAccountNumber()
-   {
-      return accountNumber;
+   public void setAccountId(String accountId) {
+      this.accountId = accountId;
    }
 }
 
