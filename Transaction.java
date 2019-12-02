@@ -3,6 +3,7 @@ package atm;
 // Abstract superclass Transaction represents an ATM transaction
 
 import atm.db.BankDatabase;
+import atm.ui.Screen;
 
 public abstract class Transaction
 {
